@@ -3,9 +3,11 @@ var mines = [0];
 var userTries = [0]
 var flag = false;
 var rndNumber = 0;
+var x = 0 //variabile livello
+var max = 0 // variabile bonus
 var m = 0; //m stands for mines index
 var u = 0; //u stands for userTries index
-var maxTries = 100 - 16;
+var maxTries = max - 16;
 var userNum = parseInt(prompt("per favore inserisca un numero da 1 a 100"));
 function rndGenerator() {
 return Math.floor(Math.random() * 100) + 1;
@@ -79,3 +81,7 @@ console.log(userTries);
 // con difficoltà 0 => tra 1 e 100
 // con difficoltà 1 => tra 1 e 80
 // con difficoltà 2 => tra 1 e 50
+function difficultyLvl(x) {
+    if(x == 0)
+        maxTries =
+}
