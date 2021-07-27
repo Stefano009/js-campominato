@@ -8,6 +8,7 @@ var max = difficultyLvl(parseInt(prompt("inserire un numero da 0 a 2 per selezio
 var m = 0; //m stands for mines index
 var u = 0; //u stands for userTries index
 var maxTries = max - 16;
+var clicks = 0;
 // var userNum = parseInt(prompt("per favore inserisca un numero da 1 a " + max));
 function rndGenerator() {
 return Math.floor(Math.random() * max) + 1;
@@ -95,7 +96,7 @@ function difficultyLvl(x) {
     // creo il campo minato
 function minefield(cell) {
     for (let i = 1; i <= cell; i++){
-        let cell = `<div id = "cell" data-cell="${i}" class = "cell">${i}</div>`;
+        let cell = `<div id = "cell" onclick = "onClick" data-cell="${i}" class = "cell">${i}</div>`;
         let templateCell = document.createElement('DIV');
         templateCell.classList.add('square');
         templateCell.innerHTML = cell;
@@ -114,9 +115,16 @@ document.getElementById('campo').addEventListener('click',
         element[0].classList.add("boom");
         alert("you lost!");
         document.getElementById("refresh").className = "d-flex";
+        alert("il tuo score è: " + clicks);
         }
-        else 
+        else {
         element[0].classList.add("go");
+        onClick();
+        }
     }
 )
 minefield(max);
+function onClick() {
+    clicks += 1;
+    document.getElementById("clicks").innerHTML = clicks;
+  };
