@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#campo{
+    width: 50vw;
+    height: 50vw;
+    margin: 50px auto;
+}
+.square{
+    border: 1px solid gray;
+    background-color: lightgray;
+    border-radius: 0.5rem;
+    width: calc(50vw / 10);
+    height: calc(50vw / 10);
+    float: left;
+    box-shadow: 2px 2px 0.1 rgba(0, 0, 0, 0.5);
+}
+.boom {
+    background-color: red;
+}
+.go {
+    background-color: green;
+}
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+}
+.none {
+    display: none;
+}
+.d-flex {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#button {
+    padding: 2rem;
+    font-size: 2rem;
+    color: white;
+    border-radius: 0.8rem;
+    border: 2px yellow solid;
+    background-color: rgba(0, 0, 0, 0.8);
+}
