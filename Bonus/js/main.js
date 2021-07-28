@@ -114,8 +114,8 @@ document.getElementById('campo').addEventListener('click',
         if (mines.includes(parseInt(userCell)) == true) {
         element[0].classList.add("boom");
         alert("you lost!");
-        document.getElementById("refresh").className = "d-flex";
         alert("il tuo score è: " + clicks);
+        document.getElementById("refresh").className = "d-flex";
         }
         else {
         element[0].classList.add("go");
@@ -126,5 +126,5 @@ document.getElementById('campo').addEventListener('click',
 minefield(max);
 function onClick() {
     clicks += 1;
-    document.getElementById("clicks").innerHTML = clicks;
-  };
+    // document.getElementById("onclicks").innerHTML = clicks;
+  }
